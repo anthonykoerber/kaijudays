@@ -3,6 +3,14 @@
 
 // Update : added throttle to increase performance
 window.addEventListener('scroll', throttle(parallax, 14));
+const copyrightDate = document.querySelector("#current-year");
+
+function setCurrentYear() {
+  if (copyrightDate) {
+    const date = new Date();
+    copyrightDate.innerHTML = date.getFullYear();
+  }
+}
 
 function throttle(fn, wait) {
   var time = Date.now();
@@ -26,3 +34,6 @@ function parallax() {
   parallax1.style.transform = 'translateY(' + coords1 + 'px)';
   // parallax2.style.transform = 'translateY(' + coords2 + 'px)';
 };
+
+// init
+setCurrentYear();

@@ -130,7 +130,7 @@ textarea {
   }
   
   .parallax-1 {
-    background-image: url('/img/bg-heads.gif');
+    background-image: url('/bg-heads.95d73264.gif');
     background-size: cover;
     background-position: center;
     height: 500px;
@@ -141,7 +141,7 @@ textarea {
   }
   
   .parallax-2 {
-    background-image: url('/img/title.png');
+    background-image: url('/title.8243bdd9.png');
     background-size: cover;
     background-position: center;
     width: 720px;
@@ -375,3 +375,6 @@ textarea {
   }
 }
 
+
+
+/*# sourceMappingURL=/main.c52e0fe2.css.map */
