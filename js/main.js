@@ -1,9 +1,33 @@
 // Parallax effect
 // Adapted from @ilonacodes article ->  https://link.medium.com/7fFiON6Q1X
 
+// analytics ga object
+window.ga = window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'G-QJP3KP3BGK', 'auto');
+ga('send', 'pageview');
+
 // Update : added throttle to increase performance
 window.addEventListener('scroll', throttle(parallax, 14));
 const copyrightDate = document.querySelector("#current-year");
+
+const eventLink = document.querySelector("#event-link");
+const mapLink = document.querySelector("#map-link");
+const kaijudaysLink = document.querySelector("#kaijudays-link");
+
+eventLink.addEventListener("click", analytics);
+mapLink.addEventListener("click", analytics);
+kaijudaysLink.addEventListener("click", analytics);
+
+function analytics(e) {
+  if(ga) {
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'link',
+      eventAction: 'click',
+      eventLabel: e.target.id
+    });
+  }
+}
 
 function setCurrentYear() {
   if (copyrightDate) {
