@@ -90,7 +90,7 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-   h3, p, img {
+   h3, p, img, ul {
      margin: 0.5em 0!important;
    }
 
@@ -116,7 +116,10 @@ textarea {
    ul {
      list-style-type: none;
      padding: 0;
-     margin: 0;
+   }
+
+   .specifics p, .specifics ul {
+    margin-bottom: 1em !important;
    }
   
   .parallax-wrapper {
@@ -178,9 +181,6 @@ textarea {
 
   footer {
     border-top: 6px solid #fff;
-    /* background-image: url('/img/bg-heads.gif'); */
-    /* background-size: cover; */
-    /* background-position: top; */
   }
 
   .copyright {
