@@ -96,7 +96,7 @@ textarea {
 
    h1 {
     font-weight: 100;
-    margin: 0.25em 0 !important;
+    margin: 0 !important;
    }
 
    h3 {
@@ -126,10 +126,36 @@ textarea {
     overflow-y: hidden;
   }
 
+  .event-banner {
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 0.7em;
+    line-height: 1em;
+    color: #ff1565;
+  }
+
+  .event-banner, .holder {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .holder:not(last-child) {
+    margin-right: 0.7em;
+  }
+
+  .date {
+    font-weight: 700;
+    color: #000;
+    display: inline-block;
+    padding: 0.25em;
+    background: #fff;
+    border-radius: 0.2em;
+  }
+
   main {
     min-height: 500px;
     background-color: #ff1565;
-    border-top: 6px solid #fff;
   }
   
   .parallax-1 {
@@ -187,6 +213,29 @@ textarea {
     display: block;
     margin-top: 1em;
     font-size: 0.75em;
+  }
+
+  .feature {
+    margin-bottom: 2em;
+  }
+
+  .calendar {
+    -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.33);
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.33);
+  }
+
+  .calendar li {
+    display: block;
+    padding: 0.25em 0.5em; 
+  }
+
+  
+  .calendar li:nth-child(even) {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  .right {
+    float: right;
   }
 
 /* ==========================================================================
