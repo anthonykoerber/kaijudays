@@ -102,7 +102,13 @@ textarea {
    h3 {
     font-family: 'Roboto Condensed', sans-serif;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 700;
+   }
+
+   h1 + h3, 
+   h3 + p ,
+   h3 + ul {
+    margin-top: -0.5em !important;
    }
 
    a {
@@ -128,30 +134,28 @@ textarea {
   }
 
   .event-banner {
-    text-transform: uppercase;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 400;
-    font-size: 0.7em;
-    line-height: 1em;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     color: #ff1565;
   }
 
-  .event-banner, .holder {
-    display: flex;
-    align-items: baseline;
+  .event-text {
+    color: #fff;
+    margin-left: 0.5em;
   }
 
-  .holder:not(last-child) {
-    margin-right: 0.7em;
+  .event-text p {
+    font-size: 0.75em;
+    line-height: 1.2em;
+    font-weight:700;
+    margin: 0;
   }
 
-  .date {
-    font-weight: 700;
-    color: #000;
-    display: inline-block;
-    padding: 0.25em;
-    background: #fff;
-    border-radius: 0.2em;
+  .event-text p span {
+    display: block;
+    font-weight:400;
   }
 
   main {
@@ -192,6 +196,7 @@ textarea {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1.0em;
+    border-radius: 3px;
     -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.33);
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.33);
   }
@@ -206,10 +211,6 @@ textarea {
     color: #1567ff;
   }
 
-  /* footer {
-    border-top: 6px solid #fff;
-  } */
-
   .copyright {
     display: block;
     margin-top: 1em;
@@ -218,30 +219,6 @@ textarea {
 
   .feature {
     margin-bottom: 2em;
-  }
-
-  .calendar {
-    font-family: 'Roboto Condensed', sans-serif;
-    background: #000;
-    font-weight: 400;
-    color: #fff;
-    /* color: #15ffad; */
-    /* -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.33);
-    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.33); */
-  }
-
-  .calendar li {
-    display: block;
-    padding: 0.25em 0.5em; 
-  }
-
-  
-  .calendar li:nth-child(even) {
-    background: rgba(255, 255, 255, 0.15);
-  }
-  
-  .right {
-    float: right;
   }
 
 /* ==========================================================================
@@ -327,6 +304,62 @@ textarea {
 }
 
 /* ==========================================================================
+   CSS Calendar icon
+   ========================================================================== */
+
+   .event-date {
+    width: 48px; 
+    height: 60px; 
+    background: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .event-date p {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center; 
+    margin: 0 !important;
+  }
+
+  .event-date p span {
+    background: #ff1565;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  /* ==========================================================================
+   All Events Calendar 
+   ========================================================================== */
+
+  .calendar {
+    font-family: 'Roboto Condensed', sans-serif;
+    background: #000;
+    font-weight: 400;
+    color: #fff;
+    border-radius: 3px;
+  }
+
+  .calendar li {
+    display: block;
+    padding: 0.25em 0.5em; 
+  }
+
+  
+  .calendar li:nth-child(even) {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  .right {
+    float: right;
+  }
+
+/* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
@@ -345,6 +378,10 @@ textarea {
 
   .content {
     max-width: 360px;
+  }
+
+  .event-banner {
+    font-size: 20px;
   }
 }
 
