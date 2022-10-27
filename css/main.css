@@ -125,7 +125,7 @@ textarea {
      padding: 0;
    }
 
-   .specifics p, .specifics ul {
+   p, ul {
     margin-bottom: 1em !important;
    }
   
@@ -150,7 +150,7 @@ textarea {
     font-size: 0.75em;
     line-height: 1.2em;
     font-weight:700;
-    margin: 0;
+    margin: 0 !important;
   }
 
   .event-text p span {
@@ -186,7 +186,7 @@ textarea {
   .content {
     max-width: 700px;
     margin: 0 auto;
-    padding: 1em 0!important;
+    padding: 0.5em 0!important;
   }
 
   .button {
@@ -217,8 +217,12 @@ textarea {
     font-size: 0.75em;
   }
 
-  .feature {
+  .feature:not(:last-of-type) {
     margin-bottom: 2em;
+  }
+
+  .feature:last-of-type {
+    margin-bottom: 1em;
   }
 
 /* ==========================================================================
@@ -253,7 +257,6 @@ textarea {
   position: absolute;
   white-space: nowrap;
   width: 1px;
-  /* 1 */
 }
 
 /*
@@ -301,6 +304,12 @@ textarea {
 
 .clearfix::after {
   clear: both;
+}
+
+iframe {
+	aspect-ratio: 16 / 9;
+	height: 100%;
+	width: 100%;
 }
 
 /* ==========================================================================
