@@ -355,10 +355,21 @@ iframe {
   }
 
   .calendar li {
-    display: block;
     padding: 0.25em 0.5em; 
+    display: flex;
+    align-items: center;
   }
-
+  
+  .calendar li a {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .calendar li span {
+    white-space: nowrap;
+  }
   
   .calendar li:nth-child(even) {
     background: rgba(255, 255, 255, 0.15);
