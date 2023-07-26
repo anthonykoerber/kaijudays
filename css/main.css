@@ -160,7 +160,8 @@ textarea {
 
   main {
     min-height: 500px;
-    background-color: #ff1565;
+    /* background-color: #ff1565; */
+    background-color: #000;
   }
   
   .parallax-1 {
