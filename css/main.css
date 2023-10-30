@@ -141,6 +141,10 @@ textarea {
     color: #ff1565;
   }
 
+  .mid {
+    background: rgba(0,0,0,0.5);
+  }
+
   .event-text {
     color: #fff;
     margin-left: 0.5em;
@@ -161,8 +165,18 @@ textarea {
   main {
     min-height: 500px;
     background-color: #ff1565;
-    /* background-color: #000; */
   }
+
+  main header {
+    background-color: rgba(0,0,0,0.25);
+  }
+
+  main header h5 {
+    text-transform: uppercase !important;
+    margin: 0;
+    padding: 0;
+  }
+
   
   .parallax-1 {
     background-image: url('/img/bg-heads.gif');
